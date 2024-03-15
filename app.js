@@ -24,9 +24,9 @@ app.set("view engine", "ejs");
 app.set("views", "views");
 
 //routes
-app.use("/", homeRouter);
-app.use("/", nounRouter);
-app.use("/", prepositionRouter);
+app.use("/api/v1/", homeRouter);
+app.use("/api/v1/", nounRouter);
+app.use("/api/v1/", prepositionRouter);
 
 
 
@@ -44,4 +44,3 @@ app.listen(port, () => {
    
       
 // });
-module.exports = app;
