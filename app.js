@@ -4,7 +4,7 @@ const bodyparser = require("body-parser");
 const nounRouter = require("./routes/noun");
 const prepositionRouter = require("./routes/preposition");
 const homeRouter = require("./routes/home");
-const mongodbConnection = require('./connection/db')
+// const mongodbConnection = require('./connection/db')
 
 
 
@@ -33,10 +33,11 @@ app.use("/api/v1/",(req, res, next) => {
 });
 
 //servers
-
-mongodbConnection(()=>{
-    app.listen(port, () => {
-        console.log(`server is running on port ${port}`);
-      });
-      
+app.listen(port, () => {
+  console.log(`server is running on port ${port}`);
 });
+
+// mongodbConnection(()=>{
+   
+      
+// });
