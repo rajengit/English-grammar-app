@@ -24,11 +24,11 @@ app.set("views", "views");
 
 //routes
 
-app.use("/api/v1/", nounRouter);
-app.use("/api/v1/", prepositionRouter);
-app.use("/api/v1/", homeRouter);
+app.use("/", nounRouter);
+app.use("/", prepositionRouter);
+app.use("/", homeRouter);
 
-app.use("/api/v1/",(req, res, next) => {
+app.use("/",(req, res, next) => {
   res.status(404).render("404", { IdTitle: "Page Not Found" });
 });
 
