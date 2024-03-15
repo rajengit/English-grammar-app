@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require("express");
 const expressLayouts = require("express-ejs-layouts");
 const bodyparser = require("body-parser");
@@ -10,7 +11,7 @@ const homeRouter = require("./routes/home");
 
 const app = express();
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 //Static files
 app.use(express.static("public"));
@@ -26,6 +27,8 @@ app.set("views", "views");
 app.use("/", homeRouter);
 app.use("/", nounRouter);
 app.use("/", prepositionRouter);
+
+
 
 
 app.use("/",(req, res, next) => {
