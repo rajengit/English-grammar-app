@@ -11,7 +11,7 @@ const homeRouter = require("./routes/home");
 
 const app = express();
 
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 //Static files
 app.use(express.static("public"));
@@ -36,8 +36,8 @@ app.use("/api/v1/",(req, res, next) => {
 });
 
 //servers
-app.listen(port, () => {
-  console.log(`server is running on port ${port}`);
+app.listen(PORT, () => {
+  console.log(`server is running on port ${PORT}`);
 });
 
 // mongodbConnection(()=>{
