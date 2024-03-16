@@ -1,6 +1,6 @@
 require('dotenv').config()
 const express = require("express");
-const expressLayouts = require("express-ejs-layouts");
+// const expressLayouts = require("express-ejs-layouts");
 const bodyparser = require("body-parser");
 const nounRouter = require("./routes/noun");
 const prepositionRouter = require("./routes/preposition");
