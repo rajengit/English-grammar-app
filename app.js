@@ -31,9 +31,9 @@ app.use("/api/v1/", prepositionRouter);
 
 
 
-app.use("/api/v1/",(req, res, next) => {
-  res.status(404).render("404", { IdTitle: "Page Not Found" });
-});
+// app.use("/api/v1/",(req, res, next) => {
+//   res.status(404).render("404", { IdTitle: "Page Not Found" });
+// });
 
 //servers
 app.listen(PORT, () => {
