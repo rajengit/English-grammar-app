@@ -15,13 +15,16 @@ const PORT = process.env.PORT || 3000;
 
 //Static files
 app.use(express.static("public"));
-app.use(express.static(`${__dirname}/public`));
+
+app.use(express.static(`${__dirname}/'public'`));
 app.use(express.json());
 // Set Templating Engine
 
 // app.use(expressLayouts);
 app.set("view engine", "ejs");
-app.set("views", "views");
+
+app.set("views", __dirname + "/views" );
+// app.set("views", "views");
 
 //routes
 app.use("/api/v1/", homeRouter);
@@ -32,7 +35,7 @@ app.use("/api/v1/", prepositionRouter);
 
 
 // app.use("/api/v1/",(req, res, next) => {
-//   res.status(404).render("404", { IdTitle: "Page Not Found" });
+//   res.status(404).render("api/404", { IdTitle: "Page Not Found" });
 // });
 
 //servers
