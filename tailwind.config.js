@@ -1,12 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./views/**/*.ejs"],
+  content: ["./api/views/**/*.ejs"],
   theme: {
     extend: {
-      fontFamily:{
-        'custome':[ "Lato", "sans-serif"]
-      }
+      fontFamily: {
+        'custome': ["Lato", "sans-serif"]
+      },
     },
+  },
+  variants:{
+    extend:{
+         backgrougroundColor:['active']
+    }
   },
   plugins: [],
 }

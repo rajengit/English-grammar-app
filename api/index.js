@@ -6,6 +6,7 @@ const nounRouter = require("../routes/noun");
 const prepositionRouter = require("../routes/preposition");
 const homeRouter = require("../routes/home");
 // const mongodbConnection = require('./connection/db')
+const verbRouter = require('../routes/verb');
 
 
 
@@ -30,13 +31,14 @@ app.set("views", __dirname + "/views" );
 app.use("/api/v1/", homeRouter);
 app.use("/api/v1/", nounRouter);
 app.use("/api/v1/", prepositionRouter);
+app.use("/api/v1/", verbRouter)
 
 
 
 
-// app.use("/api/v1/",(req, res, next) => {
-//   res.status(404).render("api/404", { IdTitle: "Page Not Found" });
-// });
+app.use("/api/v1/",(req, res, next) => {
+  res.status(404).render("404", { IdTitle: "Page Not Found" });
+});
 
 //servers
 app.listen(PORT, () => {

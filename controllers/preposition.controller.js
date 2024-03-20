@@ -1,6 +1,6 @@
 const data = [
   {
-    topic: "Prepositions",
+    topic: "Prepositions ",
     title: "introduction",
     definition: "Default page ",
     pageTitle: "Introduction",
@@ -9,30 +9,32 @@ const data = [
     path:'/prposition'
   },
     {
-      topic:'Prepositions',
+      topic:'Prepositions ',
       title: "on",
       definition:
-        "preposition is the word wich connects noun and pronouns in a sentences",
+        "the preposition ‘on‘ is generally used to talk about specific days, dates, or occasions.",
+
+
       pageTitle: "ON preposition",
       url: "/api/v1/preposition/on",
       next_page: "under",
       path:'/prposition'
     },
     {
-      topic:'Prepositions',
+      topic:'Prepositions ',
       title: "under",
       definition:
-        "preposition is the word wich connects noun and pronouns in a sentences",
+        "It is used to describe something that is below or lower than something else",
       pageTitle: "under preposition",
       url: "/api/v1/preposition/under",
       next_page: "under",
       path:'/prposition'
     },
     {
-      topic:'Prepositions',
-      title: "Behind",
+      topic:'Prepositions ',
+      title: "behind",
       definition:
-        "preposition is the word wich connects noun and pronouns in a sentences",
+        "The preposition behind means at or to the back of someone or something. For example",
       pageTitle: "under preposition",
       url: "/api/v1/preposition/behind",
       next_page: "behind",
@@ -41,10 +43,15 @@ const data = [
   ];
 
 exports.getPrepositions = (req, res, next) => {
+  const id = req.params;
+  console.log(req.params);
+
+  const IdTitle = Object.values(id)[0];
+  const single_post = data.find((el) => el.title === IdTitle);
  
 
-    let id = JSON.stringify(req.params);
-    res.render("preposition", {data});
+    
+    res.render(!single_post ?"404":"preposition", {data ,single_post});
     // console.log(data);
     //navbar
     //sidebar

@@ -1,53 +1,54 @@
-<%-include('includes/head.ejs')%> <%-include('includes/navbar.ejs')%>
-<!-- sidebar -->
-<%-include('includes/sidebar.ejs')%>
+<%-include('includes/head.ejs')%>
+<body id="main" class="">
+  <%-include('includes/navbar.ejs')%>
+  <%-include('includes/sidebar.ejs')%>
 
-<div class="md:ml-56  font-sans bg-[#EFEFEF] max-w-full p-8">
-  <div class="grid  grid-cols-1 md:grid-cols-5 gap-1">
-     <div class="col-span-4">
-      <section class="mb-10 ">
-        <div class="h-24 w-full m-auto flex justify-center items-center">
-          Advertisment
-        
-        </div>
-        <h1 class="text-[48px] mb-8">Noun</h1>
-  
-        <ul class="flex justify-between md:mr-20">
-          <li
-            class="text-xl font-medium text-white rounded-[8px] bg-[#006A57] p-4"
+  <!-- Hero Section -->
+  <div class="md:ml-56 font-sans bg-[#EFEFEF] max-w-full p-2   ">
+    <div class="grid grid-cols-1 xl:grid-cols-5 gap-1">
+      <div class="col-span-4">
+        <section class="mb-10 md:px-8 overlay-selector">
+          <div
+            class="h-24 border-[#b5b5b5] border w-full m-auto flex justify-center items-center"
           >
-            <a href="#">previous</a>
-          </li>
-          <li
-            class="text-xl font-medium text-white rounded-[8px] bg-[#006A57] p-4"
-          >
-            <a href="#">next</a>
-          </li>
-        </ul>
-        <div class="mt-8">
-          <p class="text-[18px] leading-loose tracking-wider font-custome">
-            A preposition is a word or a group of words that comes before a noun
-            or a pronoun and connects it to another part of a sentence. It
-            generally shows the relation between a noun/pronoun and another part
-            of the sentence in terms of place, time, and movement.
-          </p>
-        </div>
-        <div class="p-1">
-          <h1 class="text-[38px]  my-8 bg-[#006a5717] text-[#006A57] rounded">
-            Examples
-          </h1>
-          <ul class="text-[24px] flex flex-col gap-5">
-            <li>What are you doing on Sunday?</li>
-            <li>I will buy clothes for all of you on Diwali.</li>
+            Advertisment
+          </div>
+          <h1 class="text-[32px]  my-8"><%=single_post.title%></h1>
+
+          <ul class="flex justify-between  md:mr-20">
+            <li
+              class="text-[18px] font-medium text-white rounded-[8px] bg-[#006A57] p-4"
+            >
+              <a href="#">previous</a>
+            </li>
+            <li
+              class="text-[18px] font-medium text-white rounded-[8px] bg-[#006A57] p-4"
+            >
+              <a href="#">next</a>
+            </li>
           </ul>
-        </div>
-        
-      </section>
-      
-     </div>
-     <div class=" p-3 flex justify-center items-center bg-[#dddddd]">
-          Advertisment
-     </div>
+          <div class="my-8">
+            <p
+              class="text-[24px] bg-[#006a5717] text-[#006A57]  p-4"
+            >
+              The preposition ‘ON‘ is generally used to talk about specific
+              days, dates, or occasions.
+            </p>
+          </div>
+          <div>
+            <h1 class="text-[28px] my-4 bg-[#006a5717] text-[#006A57] rounded">
+              Examples
+            </h1>
+            <ul class="text-[18px] flex flex-col gap-2 p-2">
+              <li>What are you doing on Sunday?</li>
+              <li>I will buy clothes for all of you on Diwali.</li>
+            </ul>
+          </div>
+          <div class=></div>
+        </section>
+      </div>
+      <%-include('includes/Advertisment.ejs') %>
+    </div>
   </div>
-</div>
-
+  <script src="/js/script.js"></script>
+</body>
