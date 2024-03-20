@@ -756,16 +756,8 @@ video {
   overflow: auto;
 }
 
-.overflow-scroll{
-  overflow: scroll;
-}
-
 .overflow-x-auto{
   overflow-x: auto;
-}
-
-.overflow-y-auto{
-  overflow-y: auto;
 }
 
 .overflow-x-hidden{
@@ -774,10 +766,6 @@ video {
 
 .overflow-y-hidden{
   overflow-y: hidden;
-}
-
-.overflow-y-scroll{
-  overflow-y: scroll;
 }
 
 .rounded{

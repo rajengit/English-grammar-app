@@ -51,7 +51,7 @@ exports.getPrepositions = (req, res, next) => {
  
 
     
-    res.render(!single_post ?"404":"preposition", {data ,single_post});
+    res.render(single_post ?"preposition":"404", {data ,single_post});
     // console.log(data);
     //navbar
     //sidebar
