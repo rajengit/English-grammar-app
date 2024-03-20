@@ -47,11 +47,12 @@ exports.getPrepositions = (req, res, next) => {
   console.log(req.params);
 
   const IdTitle = Object.values(id)[0];
-  const single_post = data.find((el) => el.title === IdTitle);
+  // const single_post = data.find((el) => el.title === IdTitle);
  
 
     
-    res.render("preposition", {data ,single_post});
+    // res.render("preposition", {data ,single_post});
+    res.send(`this is ${IdTitle} page`)
     // console.log(data);
     //navbar
     //sidebar
