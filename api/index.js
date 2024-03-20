@@ -2,11 +2,11 @@ require('dotenv').config()
 const express = require("express");
 // const expressLayouts = require("express-ejs-layouts");
 const bodyparser = require("body-parser");
-const nounRouter = require("../routes/noun");
-const prepositionRouter = require("../routes/preposition");
-const homeRouter = require("../routes/home");
+const nounRouter = require("./routes/noun");
+const prepositionRouter = require("./routes/preposition");
+const homeRouter = require("./routes/home");
 // const mongodbConnection = require('./connection/db')
-const verbRouter = require('../routes/verb');
+const verbRouter = require('./routes/verb');
 
 
 

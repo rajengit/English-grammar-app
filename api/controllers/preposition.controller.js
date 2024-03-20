@@ -49,10 +49,10 @@ exports.getPrepositions = (req, res, next) => {
   const IdTitle = Object.values(id)[0];
   const single_post = data.find((el) => el.title === IdTitle);
  
-
+   res.render( !single_post ?"404":"preposition", { data, IdTitle, single_post});
     
     // res.render("preposition", {data ,single_post});
-    res.send(`this is ${single_post.definition} page`)
+    
     // console.log(data);
     //navbar
     //sidebar
