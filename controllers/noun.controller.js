@@ -46,6 +46,7 @@ exports.getNoun = (req, res, next) => {
   const IdTitle = Object.values(id)[0];
   const single_post = data.find((el) => el.title === IdTitle);
   // console.log(single_post);
-  res.render( single_post ?"noun":"404", { data, IdTitle, single_post});
+  // res.render( !single_post ?"404":"noun", { data, IdTitle, single_post});
+  res.render( "noun", { data, IdTitle, single_post});
 };
  
